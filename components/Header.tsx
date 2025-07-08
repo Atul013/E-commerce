@@ -15,11 +15,6 @@ import {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(3);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const categories = [
     'Electronics', 'Fashion', 'Home & Garden', 'Sports', 'Books', 'Health', 'Automotive', 'Toys'
@@ -115,7 +110,7 @@ export default function Header() {
             <Button variant="ghost" className="flex flex-col items-center p-2 h-auto relative">
               <ShoppingCart className="w-5 h-5" />
               <span className="text-xs">Cart</span>
-              {isMounted && cartCount > 0 && (
+              {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {cartCount}
                 </span>
