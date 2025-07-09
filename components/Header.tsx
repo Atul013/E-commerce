@@ -130,31 +130,33 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-gray-900 text-white">
+      <nav className="bg-gray-900 text-white sticky top-0 z-40 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center space-x-8 py-2 overflow-x-auto">
+          <div className="flex items-center space-x-8 py-3 overflow-x-auto">
             {categories.slice(0, 6).map((category) => (
               <a
                 key={category}
                 href="#categories"
-                className="whitespace-nowrap hover:text-red-400 transition-colors py-2 text-sm"
+                className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-medium relative group"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 {category}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <a 
               href="#categories" 
-              className="whitespace-nowrap hover:text-red-400 transition-colors py-2 text-sm"
+              className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-medium relative group"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               More
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
         </div>

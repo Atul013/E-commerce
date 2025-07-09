@@ -45,16 +45,17 @@ export default function CategorySection() {
             return (
               <div
                 key={category.id}
-                className="group cursor-pointer"
+                className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
                 onClick={() => handleCategoryClick(category.name)}
               >
-                <div className="bg-white rounded-xl p-6 text-center hover-lift premium-shadow hover:premium-shadow-lg transition-all duration-300">
-                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <div className="bg-white rounded-xl p-6 text-center premium-shadow hover:premium-shadow-lg transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-gray-50 border border-transparent group-hover:border-red-100">
+                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-medium text-gray-900 text-sm group-hover:text-red-600 transition-colors">
+                  <h3 className="font-medium text-gray-900 text-sm group-hover:text-red-600 transition-all duration-300 group-hover:font-semibold">
                     {category.name}
                   </h3>
+                  <div className="w-0 h-0.5 bg-red-600 mx-auto mt-2 transition-all duration-300 group-hover:w-8"></div>
                 </div>
               </div>
             );

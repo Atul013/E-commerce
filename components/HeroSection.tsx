@@ -25,8 +25,8 @@ export default function HeroSection() {
                 Shop Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg" onClick={() => window.location.href = '/#deals'}>
-                View Deals
+              <Button size="lg" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white hover:text-black px-8 py-3 text-lg transition-all duration-300" onClick={() => window.location.href = '/#deals'}>
+                View Details
               </Button>
             </div>
             
