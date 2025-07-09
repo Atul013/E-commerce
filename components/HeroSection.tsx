@@ -21,11 +21,11 @@ export default function HeroSection() {
               we bring you the best selection with guaranteed quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg" onClick={() => window.location.href = '/#products'}>
                 Shop Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg" onClick={() => window.location.href = '/#deals'}>
                 View Deals
               </Button>
             </div>
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <p className="font-semibold">Free Shipping</p>
-                  <p className="text-sm text-gray-400">Orders over $35</p>
+                  <p className="text-sm text-gray-400">Orders over $50</p>
                 </div>
               </div>
               

@@ -32,7 +32,7 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <span>Free shipping on orders over $35</span>
+            <span>Free shipping on orders over $50</span>
             <span>|</span>
             <span>Customer Service</span>
           </div>
@@ -91,23 +91,23 @@ export default function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuItem>Sign In</DropdownMenuItem>
-                <DropdownMenuItem>Create Account</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/account'}>Sign In</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/account'}>Create Account</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Your Orders</DropdownMenuItem>
-                <DropdownMenuItem>Your Account</DropdownMenuItem>
-                <DropdownMenuItem>Your Wishlist</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/account'}>Your Orders</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/account'}>Your Account</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/account'}>Your Wishlist</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             {/* Wishlist */}
-            <Button variant="ghost" className="flex flex-col items-center p-2 h-auto">
+            <Button variant="ghost" className="flex flex-col items-center p-2 h-auto" onClick={() => window.location.href = '/account'}>
               <Heart className="w-5 h-5" />
               <span className="text-xs">Wishlist</span>
             </Button>
 
             {/* Cart */}
-            <Button variant="ghost" className="flex flex-col items-center p-2 h-auto relative">
+            <Button variant="ghost" className="flex flex-col items-center p-2 h-auto relative" onClick={() => window.location.href = '/cart'}>
               <ShoppingCart className="w-5 h-5" />
               <span className="text-xs">Cart</span>
               {cartCount > 0 && (

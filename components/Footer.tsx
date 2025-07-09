@@ -19,7 +19,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="bg-white text-black border-0"
               />
-              <Button className="bg-black hover:bg-gray-800 text-white px-6">
+              <Button className="bg-black hover:bg-gray-800 text-white px-6" onClick={() => alert('Subscribed to newsletter!')}>
                 Subscribe
               </Button>
             </div>

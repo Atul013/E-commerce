@@ -17,14 +17,14 @@ export default function Home() {
       <CategorySection />
       
       {/* Featured Products */}
-      <section className="py-16 bg-white">
+      <section id="products" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Products</h2>
               <p className="text-gray-600">Handpicked selections just for you</p>
             </div>
-            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
+            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50" onClick={() => window.location.href = '/#all-products'}>
               View All
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* Best Sellers */}
-      <section className="py-16 bg-gray-50">
+      <section id="deals" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
@@ -51,7 +51,7 @@ export default function Home() {
                 <p className="text-gray-600">Customer favorites that keep selling out</p>
               </div>
             </div>
-            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
+            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50" onClick={() => window.location.href = '/#all-products'}>
               See All Best Sellers
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* All Products */}
-      <section className="py-16 bg-white">
+      <section id="all-products" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <div>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3" onClick={() => alert('Loading more products...')}>
               Load More Products
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -104,10 +104,10 @@ export default function Home() {
             Get exclusive access to new arrivals, special offers, and member-only deals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3" onClick={() => window.location.href = '/#products'}>
               Start Shopping
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3" onClick={() => alert('Learn more about EliteStore...')}>
               Learn More
             </Button>
           </div>

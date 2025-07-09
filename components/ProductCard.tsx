@@ -69,7 +69,15 @@ export default function ProductCard({
               ? 'bg-red-100 text-red-600 hover:bg-red-200'
               : 'bg-white/80 text-gray-600 hover:bg-white hover:text-red-600'
           }`}
-          onClick={() => setFavorite(!favorite)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setFavorite(!favorite);
+            if (!favorite) {
+              alert('Added to wishlist!');
+            } else {
+              alert('Removed from wishlist!');
+            }
+          }}
         >
           <Heart className={`w-4 h-4 ${favorite ? 'fill-current' : ''}`} />
         </Button>
@@ -80,11 +88,26 @@ export default function ProductCard({
             isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <Button size="sm" className="flex-1 bg-red-600 hover:bg-red-700 text-white">
+          <Button 
+            size="sm" 
+            className="flex-1 bg-red-600 hover:bg-red-700 text-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              alert(`Added ${name} to cart!`);
+            }}
+          >
             <ShoppingCart className="w-4 h-4 mr-2" />
             Add to Cart
           </Button>
-          <Button size="sm" variant="outline" className="bg-white/90 hover:bg-white">
+          <Button 
+            size="sm" 
+            variant="outline" 
+            className="bg-white/90 hover:bg-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              alert(`Quick view for ${name}`);
+            }}
+          >
             <Eye className="w-4 h-4" />
           </Button>
         </div>
