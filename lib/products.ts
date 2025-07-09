@@ -22,7 +22,7 @@ export const allProducts: Product[] = [
     reviews: 2847,
     image: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg',
     badge: 'Best Seller',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Experience premium audio quality with our flagship wireless headphones featuring advanced noise cancellation technology.',
   },
   {
@@ -34,7 +34,7 @@ export const allProducts: Product[] = [
     reviews: 1532,
     image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg',
     badge: 'New',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Stay connected and healthy with our advanced smartwatch featuring comprehensive health monitoring and GPS tracking.',
   },
   {
@@ -46,7 +46,7 @@ export const allProducts: Product[] = [
     reviews: 687,
     image: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg',
     badge: 'Sale',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Capture life in stunning 4K resolution with our professional-grade wireless camera system perfect for content creators.',
   },
   {
@@ -56,7 +56,7 @@ export const allProducts: Product[] = [
     rating: 4.5,
     reviews: 1823,
     image: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Protect your home with intelligent AI-powered security camera featuring facial recognition and smart alerts.',
   },
   {
@@ -67,7 +67,7 @@ export const allProducts: Product[] = [
     rating: 4.7,
     reviews: 2156,
     image: 'https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Dominate your games with our precision wireless gaming mouse featuring customizable RGB lighting and ultra-fast response.',
   },
   {
@@ -79,7 +79,7 @@ export const allProducts: Product[] = [
     reviews: 1245,
     image: 'https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg',
     badge: 'Gaming',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Immerse yourself in gaming with this stunning ultra-wide 4K monitor featuring HDR and 144Hz refresh rate.',
   },
   {
@@ -90,7 +90,7 @@ export const allProducts: Product[] = [
     rating: 4.6,
     reviews: 3421,
     image: 'https://images.pexels.com/photos/8534088/pexels-photo-8534088.jpeg',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Premium wireless earbuds with crystal clear sound, active noise cancellation, and all-day battery life.',
   },
   {
@@ -101,7 +101,7 @@ export const allProducts: Product[] = [
     reviews: 892,
     image: 'https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg',
     badge: 'Smart Home',
-    category: 'Tech & Gadgets',
+    category: 'Electronics',
     description: 'Control your entire smart home with voice commands and automated routines through this intelligent hub.',
   },
 
@@ -115,7 +115,7 @@ export const allProducts: Product[] = [
     reviews: 924,
     image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg',
     badge: 'Limited Edition',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'Elevate your style with this exquisite handcrafted leather handbag from our premium designer collection.',
   },
   {
@@ -127,7 +127,7 @@ export const allProducts: Product[] = [
     reviews: 456,
     image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg',
     badge: 'Artisan Made',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'Add elegance to any outfit with this hand-painted silk scarf featuring unique artistic patterns.',
   },
   {
@@ -139,7 +139,7 @@ export const allProducts: Product[] = [
     reviews: 1876,
     image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg',
     badge: 'Trending',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'Timeless leather jacket crafted from premium materials with a classic cut that never goes out of style.',
   },
   {
@@ -150,7 +150,7 @@ export const allProducts: Product[] = [
     rating: 4.6,
     reviews: 743,
     image: 'https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'Stylish designer sunglasses with 100% UV protection and polarized lenses for ultimate eye comfort.',
   },
   {
@@ -162,7 +162,7 @@ export const allProducts: Product[] = [
     reviews: 567,
     image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg',
     badge: 'Luxury',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'Ultra-soft cashmere wool sweater that combines luxury comfort with sophisticated style.',
   },
   {
@@ -174,7 +174,7 @@ export const allProducts: Product[] = [
     reviews: 2134,
     image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg',
     badge: 'Athletic',
-    category: 'Style & Apparel',
+    category: 'Fashion',
     description: 'High-performance running shoes with advanced cushioning and breathable materials for optimal comfort.',
   },
 
@@ -188,7 +188,7 @@ export const allProducts: Product[] = [
     reviews: 743,
     image: 'https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg',
     badge: 'Editor\'s Choice',
-    category: 'Living Spaces',
+    category: 'Home & Garden',
     description: 'Brew café-quality coffee at home with our premium espresso machine featuring integrated ceramic grinder.',
   },
   {
@@ -200,7 +200,7 @@ export const allProducts: Product[] = [
     reviews: 1456,
     image: 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg',
     badge: 'Health',
-    category: 'Living Spaces',
+    category: 'Home & Garden',
     description: 'Advanced air purifier with HEPA filtration system and smart controls for cleaner, healthier air.',
   },
   {
@@ -211,7 +211,7 @@ export const allProducts: Product[] = [
     rating: 4.8,
     reviews: 2341,
     image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
-    category: 'Living Spaces',
+    category: 'Home & Garden',
     description: 'Ultra-soft bamboo bed sheets that are naturally hypoallergenic and temperature regulating.',
   },
   {
@@ -222,7 +222,7 @@ export const allProducts: Product[] = [
     reviews: 892,
     image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg',
     badge: 'Modern',
-    category: 'Living Spaces',
+    category: 'Home & Garden',
     description: 'Sleek modern floor lamp with adjustable brightness and color temperature for perfect ambiance.',
   },
   {
@@ -234,7 +234,7 @@ export const allProducts: Product[] = [
     reviews: 1234,
     image: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg',
     badge: 'Organic',
-    category: 'Living Spaces',
+    category: 'Home & Garden',
     description: 'Complete starter kit for growing fresh herbs at home with organic seeds and eco-friendly planters.',
   },
 
@@ -248,7 +248,7 @@ export const allProducts: Product[] = [
     reviews: 1876,
     image: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg',
     badge: 'Eco-Friendly',
-    category: 'Active Life',
+    category: 'Sports',
     description: 'Premium yoga mat made from eco-friendly materials with superior grip and cushioning.',
   },
   {
@@ -260,7 +260,7 @@ export const allProducts: Product[] = [
     reviews: 743,
     image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
     badge: 'Home Gym',
-    category: 'Active Life',
+    category: 'Sports',
     description: 'Space-saving adjustable dumbbells that replace an entire weight set for home workouts.',
   },
   {
@@ -271,7 +271,7 @@ export const allProducts: Product[] = [
     rating: 4.6,
     reviews: 2134,
     image: 'https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg',
-    category: 'Active Life',
+    category: 'Sports',
     description: 'Advanced fitness tracker with heart rate monitoring, GPS, and comprehensive health insights.',
   },
   {
@@ -283,7 +283,7 @@ export const allProducts: Product[] = [
     reviews: 456,
     image: 'https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg',
     badge: 'Pro',
-    category: 'Active Life',
+    category: 'Sports',
     description: 'Professional-grade tennis racket made from lightweight carbon fiber for optimal performance.',
   },
 
@@ -297,7 +297,7 @@ export const allProducts: Product[] = [
     reviews: 1567,
     image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
     badge: 'Bestseller',
-    category: 'Reads & Media',
+    category: 'Books',
     description: 'Transform your life with practical mindfulness techniques and wisdom from leading experts.',
   },
   {
@@ -308,7 +308,7 @@ export const allProducts: Product[] = [
     rating: 4.9,
     reviews: 892,
     image: 'https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg',
-    category: 'Reads & Media',
+    category: 'Books',
     description: 'Comprehensive cookbook collection featuring recipes from around the world with step-by-step instructions.',
   },
   {
@@ -320,7 +320,7 @@ export const allProducts: Product[] = [
     reviews: 743,
     image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg',
     badge: 'Educational',
-    category: 'Reads & Media',
+    category: 'Books',
     description: 'Master the art of digital photography with professional techniques and creative inspiration.',
   },
   {
@@ -331,7 +331,7 @@ export const allProducts: Product[] = [
     reviews: 1234,
     image: 'https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg',
     badge: 'Tech',
-    category: 'Reads & Media',
+    category: 'Books',
     description: 'Comprehensive guide to modern web development covering the latest frameworks and best practices.',
   },
 
@@ -345,7 +345,7 @@ export const allProducts: Product[] = [
     reviews: 2341,
     image: 'https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg',
     badge: 'Organic',
-    category: 'Wellness',
+    category: 'Health',
     description: 'Premium organic multivitamin complex with essential nutrients for optimal health and wellness.',
   },
   {
@@ -356,7 +356,7 @@ export const allProducts: Product[] = [
     rating: 4.8,
     reviews: 1456,
     image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg',
-    category: 'Wellness',
+    category: 'Health',
     description: 'Ultrasonic essential oil diffuser with premium oil collection for aromatherapy and relaxation.',
   },
   {
@@ -368,7 +368,7 @@ export const allProducts: Product[] = [
     reviews: 892,
     image: 'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg',
     badge: 'Medical',
-    category: 'Wellness',
+    category: 'Health',
     description: 'Accurate digital blood pressure monitor with large display and memory storage for tracking.',
   },
   {
@@ -380,7 +380,7 @@ export const allProducts: Product[] = [
     reviews: 1876,
     image: 'https://images.pexels.com/photos/4397840/pexels-photo-4397840.jpeg',
     badge: 'Fitness',
-    category: 'Wellness',
+    category: 'Health',
     description: 'High-quality whey protein isolate for muscle building and recovery with delicious flavors.',
   },
 
@@ -394,7 +394,7 @@ export const allProducts: Product[] = [
     reviews: 1234,
     image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg',
     badge: 'Wireless',
-    category: 'Auto & Tools',
+    category: 'Automotive',
     description: 'Convenient wireless charging mount for smartphones with secure grip and fast charging capability.',
   },
   {
@@ -405,7 +405,7 @@ export const allProducts: Product[] = [
     rating: 4.7,
     reviews: 892,
     image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg',
-    category: 'Auto & Tools',
+    category: 'Automotive',
     description: 'High-definition dash camera with night vision and automatic incident recording for safety.',
   },
   {
@@ -417,7 +417,7 @@ export const allProducts: Product[] = [
     reviews: 1567,
     image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg',
     badge: 'Protection',
-    category: 'Auto & Tools',
+    category: 'Automotive',
     description: 'Durable all-weather floor mats that protect your car interior from dirt, water, and wear.',
   },
   {
@@ -428,7 +428,7 @@ export const allProducts: Product[] = [
     rating: 4.4,
     reviews: 2134,
     image: 'https://images.pexels.com/photos/163016/crash-test-collision-60-km-h-distraction-163016.jpeg',
-    category: 'Auto & Tools',
+    category: 'Automotive',
     description: 'Transform your car stereo with Bluetooth connectivity for wireless music streaming and calls.',
   },
 
@@ -442,7 +442,7 @@ export const allProducts: Product[] = [
     reviews: 1876,
     image: 'https://images.pexels.com/photos/374103/pexels-photo-374103.jpeg',
     badge: 'Educational',
-    category: 'Kids & Family',
+    category: 'Toys',
     description: 'Creative building blocks set that promotes STEM learning and develops problem-solving skills.',
   },
   {
@@ -454,7 +454,7 @@ export const allProducts: Product[] = [
     reviews: 743,
     image: 'https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg',
     badge: 'Tech Toy',
-    category: 'Kids & Family',
+    category: 'Toys',
     description: 'High-speed racing drone with HD camera and intuitive remote control for aerial adventures.',
   },
   {
@@ -465,7 +465,7 @@ export const allProducts: Product[] = [
     rating: 4.6,
     reviews: 1234,
     image: 'https://images.pexels.com/photos/374103/pexels-photo-374103.jpeg',
-    category: 'Kids & Family',
+    category: 'Toys',
     description: 'Kid-friendly tablet with educational games, parental controls, and durable design.',
   },
   {
@@ -477,7 +477,7 @@ export const allProducts: Product[] = [
     reviews: 892,
     image: 'https://images.pexels.com/photos/374103/pexels-photo-374103.jpeg',
     badge: 'Classic',
-    category: 'Kids & Family',
+    category: 'Toys',
     description: 'Beautiful wooden puzzle collection that challenges minds and develops cognitive skills.',
   },
 ];
@@ -491,5 +491,5 @@ export const getProductsByCategory = (category: string): Product[] => {
 };
 
 export const categories = [
-  'Tech & Gadgets', 'Style & Apparel', 'Living Spaces', 'Active Life', 'Reads & Media', 'Wellness', 'Auto & Tools', 'Kids & Family'
+  'Electronics', 'Fashion', 'Home & Garden', 'Sports', 'Books', 'Health', 'Automotive', 'Toys'
 ];
