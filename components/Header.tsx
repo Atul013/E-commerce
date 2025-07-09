@@ -136,13 +136,24 @@ export default function Header() {
             {categories.slice(0, 6).map((category) => (
               <a
                 key={category}
-                href="#"
+                href="#categories"
                 className="whitespace-nowrap hover:text-red-400 transition-colors py-2 text-sm"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {category}
               </a>
             ))}
-            <a href="#" className="whitespace-nowrap hover:text-red-400 transition-colors py-2 text-sm">
+            <a 
+              href="#categories" 
+              className="whitespace-nowrap hover:text-red-400 transition-colors py-2 text-sm"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               More
             </a>
           </div>
@@ -156,8 +167,13 @@ export default function Header() {
             {categories.map((category) => (
               <a
                 key={category}
-                href="#"
+                href="#categories"
                 className="block py-2 text-gray-700 hover:text-red-600"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {category}
               </a>

@@ -83,11 +83,7 @@ export default function ProductCard({
         </Button>
 
         {/* Quick actions */}
-        <div
-          className={`absolute bottom-3 left-3 right-3 flex gap-2 transition-all duration-300 ${
-            isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
+        <div className="absolute bottom-3 left-3 right-3 flex gap-2">
           <Button 
             size="sm" 
             className="flex-1 bg-red-600 hover:bg-red-700 text-white"
@@ -102,13 +98,13 @@ export default function ProductCard({
           <Button 
             size="sm" 
             variant="outline" 
-            className="bg-white/90 hover:bg-white"
+            className="bg-white hover:bg-gray-50 border-gray-200"
             onClick={(e) => {
               e.stopPropagation();
-              alert(`Quick view for ${name}`);
+              alert(`View details for ${name}`);
             }}
           >
-            <Eye className="w-4 h-4" />
+            Details
           </Button>
         </div>
       </div>

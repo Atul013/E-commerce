@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import CategorySection from '@/components/CategorySection';
 import ProductCard from '@/components/ProductCard';
 import Footer from '@/components/Footer';
-import { sampleProducts, featuredProducts, bestSellers } from '@/lib/products';
+import { allProducts, featuredProducts, bestSellers } from '@/lib/products';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, TrendingUp, Star } from 'lucide-react';
 
@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sampleProducts.map((product) => (
+            {allProducts.slice(0, 12).map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
           </div>

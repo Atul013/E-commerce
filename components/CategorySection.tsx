@@ -1,6 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { Smartphone, Shirt, Home, Dumbbell, Book, Heart, Car, Baby } from 'lucide-react';
+import ProductCard from './ProductCard';
+import { getProductsByCategory, categories as categoryNames } from '@/lib/products';
+import { Button } from '@/components/ui/button';
 
 const categories = [
   { id: 1, name: 'Electronics', icon: Smartphone, color: 'from-blue-500 to-blue-600' },
@@ -14,8 +18,19 @@ const categories = [
 ];
 
 export default function CategorySection() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showAllProducts, setShowAllProducts] = useState(false);
+
+  const handleCategoryClick = (categoryName: string) => {
+    setSelectedCategory(categoryName);
+    setShowAllProducts(false);
+  };
+
+  const selectedProducts = selectedCategory ? getProductsByCategory(selectedCategory) : [];
+  const displayProducts = showAllProducts ? selectedProducts : selectedProducts.slice(0, 8);
+
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50" id="categories">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Shop by Category</h2>
@@ -31,6 +46,7 @@ export default function CategorySection() {
               <div
                 key={category.id}
                 className="group cursor-pointer"
+                onClick={() => handleCategoryClick(category.name)}
               >
                 <div className="bg-white rounded-xl p-6 text-center hover-lift premium-shadow hover:premium-shadow-lg transition-all duration-300">
                   <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -44,6 +60,42 @@ export default function CategorySection() {
             );
           })}
         </div>
+
+        {/* Category Products Display */}
+        {selectedCategory && (
+          <div className="mt-16">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{selectedCategory}</h3>
+                <p className="text-gray-600">{selectedProducts.length} products available</p>
+              </div>
+              <Button 
+                variant="outline" 
+                onClick={() => setSelectedCategory(null)}
+                className="border-red-600 text-red-600 hover:bg-red-50"
+              >
+                View All Categories
+              </Button>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {displayProducts.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
+            
+            {selectedProducts.length > 8 && !showAllProducts && (
+              <div className="text-center mt-8">
+                <Button 
+                  onClick={() => setShowAllProducts(true)}
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-3"
+                >
+                  Show All {selectedCategory} Products ({selectedProducts.length - 8} more)
+                </Button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
