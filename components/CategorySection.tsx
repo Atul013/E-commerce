@@ -7,14 +7,14 @@ import { getProductsByCategory, categories as categoryNames } from '@/lib/produc
 import { Button } from '@/components/ui/button';
 
 const categories = [
-  { id: 1, name: 'Electronics', icon: Smartphone, color: 'from-blue-500 to-blue-600' },
-  { id: 2, name: 'Fashion', icon: Shirt, color: 'from-pink-500 to-pink-600' },
-  { id: 3, name: 'Home & Garden', icon: Home, color: 'from-green-500 to-green-600' },
-  { id: 4, name: 'Sports', icon: Dumbbell, color: 'from-orange-500 to-orange-600' },
-  { id: 5, name: 'Books', icon: Book, color: 'from-purple-500 to-purple-600' },
-  { id: 6, name: 'Health', icon: Heart, color: 'from-red-500 to-red-600' },
-  { id: 7, name: 'Automotive', icon: Car, color: 'from-gray-500 to-gray-600' },
-  { id: 8, name: 'Toys', icon: Baby, color: 'from-yellow-500 to-yellow-600' },
+  { id: 1, name: 'Tech & Gadgets', icon: Smartphone, color: 'from-blue-500 to-blue-600' },
+  { id: 2, name: 'Style & Apparel', icon: Shirt, color: 'from-pink-500 to-pink-600' },
+  { id: 3, name: 'Living Spaces', icon: Home, color: 'from-green-500 to-green-600' },
+  { id: 4, name: 'Active Life', icon: Dumbbell, color: 'from-orange-500 to-orange-600' },
+  { id: 5, name: 'Reads & Media', icon: Book, color: 'from-purple-500 to-purple-600' },
+  { id: 6, name: 'Wellness', icon: Heart, color: 'from-red-500 to-red-600' },
+  { id: 7, name: 'Auto & Tools', icon: Car, color: 'from-gray-500 to-gray-600' },
+  { id: 8, name: 'Kids & Family', icon: Baby, color: 'from-yellow-500 to-yellow-600' },
 ];
 
 export default function CategorySection() {
@@ -48,14 +48,14 @@ export default function CategorySection() {
                 className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
                 onClick={() => handleCategoryClick(category.name)}
               >
-                <div className="bg-white rounded-xl p-6 text-center premium-shadow hover:premium-shadow-lg transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-gray-50 border border-transparent group-hover:border-red-100">
-                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
+                <div className="bg-white rounded-xl p-4 md:p-6 text-center shadow-md hover:shadow-lg transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-gray-50 border border-transparent group-hover:border-red-100">
+                  <div className={`w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-md group-hover:shadow-lg`}>
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-medium text-gray-900 text-sm group-hover:text-red-600 transition-all duration-300 group-hover:font-semibold">
+                  <h3 className="font-medium text-gray-900 text-xs md:text-sm group-hover:text-red-600 transition-all duration-300 group-hover:font-semibold">
                     {category.name}
                   </h3>
-                  <div className="w-0 h-0.5 bg-red-600 mx-auto mt-2 transition-all duration-300 group-hover:w-8"></div>
+                  <div className="w-0 h-0.5 bg-red-600 mx-auto mt-1 md:mt-2 transition-all duration-300 group-hover:w-6 md:group-hover:w-8"></div>
                 </div>
               </div>
             );

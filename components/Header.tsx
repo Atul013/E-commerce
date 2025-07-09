@@ -17,7 +17,7 @@ export default function Header() {
   const [cartCount, setCartCount] = useState(3);
 
   const categories = [
-    'Electronics', 'Fashion', 'Home & Garden', 'Sports', 'Books', 'Health', 'Automotive', 'Toys'
+    'Tech & Gadgets', 'Style & Apparel', 'Living Spaces', 'Active Life', 'Reads & Media', 'Wellness', 'Auto & Tools', 'Kids & Family'
   ];
 
   return (
@@ -130,14 +130,14 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-gray-900 text-white sticky top-0 z-40 border-b border-gray-800">
+      <nav className="bg-gray-900 text-white sticky top-0 z-40 border-b border-gray-800 category-nav">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center space-x-8 py-3 overflow-x-auto">
+          <div className="hidden md:flex items-center space-x-8 py-3 overflow-x-auto">
             {categories.slice(0, 6).map((category) => (
               <a
                 key={category}
                 href="#categories"
-                className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-medium relative group"
+                className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-semibold relative group category-item"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
@@ -149,28 +149,59 @@ export default function Header() {
             ))}
             <a 
               href="#categories" 
-              className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-medium relative group"
+              className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-sm font-semibold relative group category-item"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              More
+              Explore More
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
+          </div>
+          
+          {/* Mobile category navigation */}
+          <div className="md:hidden py-3">
+            <div className="flex items-center space-x-4 overflow-x-auto scrollbar-hide">
+              {categories.slice(0, 4).map((category) => (
+                <a
+                  key={category}
+                  href="#categories"
+                  className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-xs font-medium relative group category-item flex-shrink-0"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {category}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+              <a 
+                href="#categories" 
+                className="whitespace-nowrap hover:text-red-400 transition-all duration-300 py-2 text-xs font-medium relative group category-item flex-shrink-0"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                More
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white border-t shadow-lg">
           <div className="px-4 py-2 space-y-2">
             {categories.map((category) => (
               <a
                 key={category}
                 href="#categories"
-                className="block py-2 text-gray-700 hover:text-red-600"
+                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 font-medium"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMenuOpen(false);

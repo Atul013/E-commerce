@@ -43,7 +43,7 @@ export default function ProductCard({
         <img
           src={image}
           alt={name}
-          className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-48 md:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
         />
         
         {/* Badges */}
@@ -83,34 +83,36 @@ export default function ProductCard({
         </Button>
 
         {/* Quick actions */}
-        <div className="absolute bottom-3 left-3 right-3 flex gap-2">
+        <div className="absolute bottom-3 left-3 right-3 flex flex-col sm:flex-row gap-2">
           <Button 
-            size="sm" 
-            className="flex-1 bg-red-600 hover:bg-red-700 text-white"
+            size="sm"
+            className="flex-1 bg-red-600 hover:bg-red-700 text-white shadow-md hover:shadow-lg transition-all duration-200"
             onClick={(e) => {
               e.stopPropagation();
               alert(`Added ${name} to cart!`);
             }}
           >
-            <ShoppingCart className="w-4 h-4 mr-2" />
-            Add to Cart
+            <ShoppingCart className="w-4 h-4 sm:mr-2" />
+            <span className="hidden sm:inline">Add to Cart</span>
+            <span className="sm:hidden">Add</span>
           </Button>
           <Button 
             size="sm" 
             variant="outline" 
-            className="bg-white hover:bg-gray-50 border-gray-200"
+            className="bg-white hover:bg-gray-50 border-gray-200 shadow-md hover:shadow-lg transition-all duration-200"
             onClick={(e) => {
               e.stopPropagation();
               alert(`View details for ${name}`);
             }}
           >
-            Details
+            <span className="hidden sm:inline">Details</span>
+            <span className="sm:hidden">Info</span>
           </Button>
         </div>
       </div>
 
-      <div className="p-4">
-        <h3 className="font-medium text-gray-900 line-clamp-2 mb-2 group-hover:text-red-600 transition-colors">
+      <div className="p-3 md:p-4">
+        <h3 className="font-medium text-gray-900 line-clamp-2 mb-2 group-hover:text-red-600 transition-colors text-sm md:text-base">
           {name}
         </h3>
 
@@ -120,7 +122,7 @@ export default function ProductCard({
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${
+                className={`w-3 h-3 md:w-4 md:h-4 ${
                   i < Math.floor(rating)
                     ? 'text-yellow-400 fill-current'
                     : 'text-gray-300'
@@ -128,18 +130,18 @@ export default function ProductCard({
               />
             ))}
           </div>
-          <span className="text-sm text-gray-600">
+          <span className="text-xs md:text-sm text-gray-600">
             {rating} ({reviews})
           </span>
         </div>
 
         {/* Price */}
         <div className="flex items-center gap-2">
-          <span className="text-xl font-bold text-red-600">
+          <span className="text-lg md:text-xl font-bold text-red-600">
             ${price.toFixed(2)}
           </span>
           {originalPrice && (
-            <span className="text-sm text-gray-500 line-through">
+            <span className="text-xs md:text-sm text-gray-500 line-through">
               ${originalPrice.toFixed(2)}
             </span>
           )}

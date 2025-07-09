@@ -79,14 +79,14 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {allProducts.slice(0, 12).map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3" onClick={() => alert('Loading more products...')}>
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto" onClick={() => alert('Loading more products...')}>
               Load More Products
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -95,19 +95,19 @@ export default function Home() {
       </section>
 
       {/* Newsletter & CTA */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 to-red-900">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-gray-900 to-red-900">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Join Over 100,000 Happy Customers
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8">
             Get exclusive access to new arrivals, special offers, and member-only deals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3" onClick={() => window.location.href = '/#products'}>
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => window.location.href = '/#products'}>
               Start Shopping
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-3" onClick={() => alert('Learn more about EliteStore...')}>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => alert('Learn more about EliteStore...')}>
               Learn More
             </Button>
           </div>
