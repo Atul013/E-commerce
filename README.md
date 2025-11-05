@@ -30,3 +30,5 @@ The site will be available at http://localhost:3000
 
 Small improvements are welcome. Open a pull request with a clear title and short description of the change.
 
+> Note: This project uses small documentation PRs to test GitHub achievements.
+
